@@ -14,12 +14,6 @@ namespace ToDoList.Controllers
       return View(allItems);
     }
 
-    [HttpGet("/items/new")]
-    public ActionResult CreateForm()
-    {
-      return View();
-    }
-
     [HttpPost("/items")]
     public ActionResult Create(string description)
     {
@@ -31,12 +25,6 @@ namespace ToDoList.Controllers
     public ActionResult DeleteAll()
     {
       Item.ClearAll();
-      return View();
-    }
-
-    [HttpGet("/items/new")]
-    public ActionResult CreateForm()
-    {
       return View();
     }
 
